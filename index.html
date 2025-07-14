@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Elephant Visualizer</title>
+  <style>
+    body{background:#111;color:#ddd;font-family:sans-serif;padding:1em}
+    svg{background:#fff;display:block;margin-bottom:20px}
+    label{display:inline-block;margin-right:10px}
+    input[type="range"]{width:200px;vertical-align:middle}
+    #popup3d{z-index:9999}
+
+    /* center page title */
+    h2 { text-align:center; margin-top:0;}
+  </style>
+  <script type="module" crossorigin src="/AniVis/assets/main-DFBe8U9d.js"></script>
+  <link rel="modulepreload" crossorigin href="/AniVis/assets/transform-Cni_X9bb.js">
+</head>
+<body>
+  <h2><Strong>EleVis</Strong> – Use the dropdown to change datasets</h2>
+  <div>
+    <label for="stepSlider">
+      <strong>Hull Step</strong> – Click the <span style="color:red;">RED BLOCKS</span> to jump to highlighted interactions OR click <span style="color:rgb(255, 234, 0);">YELLOW BLOCKS</span> to jump to dwell zones:
+    </label>
+    <input type="range" id="stepSlider" min="0" max="0" step="1" value="0">
+    <span id="stepValue">0</span>
+  </div>
+  <div>
+    <label for="skeletonSlider"><strong>Skeleton Step:</strong></label>
+    <input type="range" id="skeletonSlider" min="1" max="50" step="1" value="5">
+    <span id="skeletonValue">5</span>
+  </div>
+
+  <svg id="viz"></svg>
+
+  <!-- Load the viewer as an ES module -->
+</body>
+</html>
